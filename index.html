@@ -1,88 +1,399 @@
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-        table, th, td{
-            border: 1px solid black;
-        }
-        th{
-            background-color: darkgreen;
-        }
-        td{
-            background-color: lightyellow;
-        }
-        td[rowspan], td[colspan]{
-            background-color: yellowgreen;
-            color: white;
-        }
-        th{
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <table cellpadding="20" style="width: 100%; text-align: center;" >
-        <thead>
-            <tr>
-                <th colspan="6">Table Title</th>
-            </tr>
+    <nav>
+        <ul>
+            <li>
+                <a href="#home" onclick="changepage('home')">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#news" onclick="changepage('news')">
+                    News
+                </a>
+            </li>
+            <li>
+                <a href="#contact" onclick="changepage('contact')">
+                    Contact
+                </a>
+            </li>
+            <li>
+                <a href="#schedule" onclick="changepage('schedule')">
+                    Schedule
+                </a>
+            </li>
+            <li>
+                <a href="#about" onclick="changepage('about')">
+                    About
+                </a>
+            </li>
+        </ul>
 
-        </thead>
-        <tbody>
-            <tr>
-                <td width="16.66%">1</td>
-                <td width="16.66%">2</td>
-                <td width="16.66%">3</td>
-                <td width="16.66%">4</td>
-                <td width="16.66%">5</td>
-                <td width="16.66%">6</td>
-            </tr>
-            <tr>
-                <td colspan="3">7</td>
-                <td colspan="3">8</td>
-            </tr>
-            <tr>
-                <td rowspan="2">9</td>
-                <td>10</td>
-                <td rowspan="2">11</td>
-                <td>12</td>
-                <td rowspan="2">13</td>
-                <td>14</td>
-            </tr>
-            <tr>
-                <td>15</td>
-                <td>16</td>
-                <td>17</td>
-            </tr>
-            <tr>
-                <td>18</td>
-                <td>19</td>
-                <td>20</td>
-                <td>21</td>
-                <td>22</td>
-                <td>23</td>
-            </tr>
-            <tr>
-                <td>24</td>
-                <td colspan="4" rowspan="3">25</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <td>26</td>
-                <td>27</td>
-            </tr>
-            <tr>
-                <td>26</td>
-                <td>27</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <th colspan="6">Table footnote</th>
-            </tr>
-        </tfoot>
-    </table>
+    </nav>
+    <main>
+        <div class="container">
+
+            <div class="home page show">
+                <h1 style="text-align: center;" class="font-roboto">Elon Musk's personal web page</h1>
+
+                <div class="content">
+                    <div class="left" style="text-align: center; ">
+                        <a href="https://en.wikipedia.org/wiki/Elon_Musk"><img
+                                style="border-radius: 50%; width: 100px; height: 100px; object-fit:cover;"
+                                src="img/photo.jpg" alt="my photo" title="my photo"></a>
+
+                        <br>
+                        <h2 style="border: 1px solid red; font-size: 50px;">Elon Musk</h2>
+                        <hr>
+                        <p style="text-align: left;">
+
+                        <address style="text-align: left;">
+                            <a href="mailto:elon.musk@edu.esiee.fr">elon.musk@edu.esiee.fr</a>
+                            <br>
+                            <a href="https://www.linkedin.com/company/spacex/">linkedin</a>
+                            <br>
+                            <a href="#activities">My others activities</a>
+
+                        </address>
+                        </p>
+                    </div>
+                    <div class="right">
+                        <h3>Biography</h3>
+                        <p>
+                            Elon Reeve Musk is a business magnate and investor. Musk
+                            is the founder, chairman, CEO and chief technology officer of SpaceX; angel investor, CEO,
+                            product architect and former chairman of Tesla, Inc.; owner, chairman and CTO of X Corp.;
+                            founder of the Boring Company; co-founder of Neuralink and OpenAI; and president of the Musk
+                            Foundation. He is the wealthiest person in the world, with an estimated net worth of US$241
+                            billion as of September 2023, according to the Bloomberg Billionaires Index, and $261
+                            billion
+                            according to Forbes, primarily from his ownership stakes in both Tesla and SpaceX.
+                        </p>
+                        <hr>
+                        <h3 id="activities">Other activities</h3>
+                        <p>
+                        <ul id="bullet-color">
+                            <li class="hugo"><a href="https://www.linkedin.com/in/hugo-zhang-esiee/">Hugo</a></li>
+                            <li class="remi"><a href="https://www.linkedin.com/in/remi-dasilva/">Remi</a></li>
+                            <li class="antoine"><a href="https://www.linkedin.com/in/antoine-tchao/">Antoine</a></li>
+                        </ul>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="news page">
+                <h1>News</h1>
+                <hr />
+                <h1>Unordered List</h1>
+                <ul>
+                    <li>Mousses</li>
+                    <li>
+                        Pastries
+                        <ul style="list-style-type: circle">
+                            <li>Croissant</li>
+                            <li>Mille-feuille</li>
+                            <li>Palmier</li>
+                            <li>Profiterole</li>
+                        </ul>
+                    </li>
+                    <li>Tartes</li>
+                </ul>
+                <hr />
+                <h1>Description List</h1>
+
+                <dl>
+                    <dt>Sashimi</dt>
+                    <dd>Sliced raw fish</dd>
+                    <dt>Sashimi</dt>
+                    <dd>Sliced raw fish</dd>
+                    <dt>Sashimi</dt>
+                    <dd>Sliced raw fish</dd>
+                </dl>
+            </div>
+            <div class="contact page">
+                <h1>Contact</h1>
+                <hr />
+                <h1>Description List</h1>
+
+                <dl>
+                    <dt>Sashimi</dt>
+                    <dd>Sliced raw fish</dd>
+                    <dt>Sashimi</dt>
+                    <dd>Sliced raw fish</dd>
+                    <dt>Sashimi</dt>
+                    <dd>Sliced raw fish</dd>
+                </dl>
+            </div>
+            <div class="schedule page">
+                <h1>Schedule</h1>
+                <hr />
+                <div style="overflow-x:auto; overflow: auto;">
+
+                    <table class="fancytable">
+                        <thead>
+                            <tr class="headerrow1">
+                                <td width="12.5%" style=" background:#74a86e;">Period&nbsp;\&nbsp;Day </td>
+                                <td width="12.5%">Sun</td>
+                                <td width="12.5%">Mon</td>
+                                <td width="12.5%">Tue</td>
+                                <td width="12.5%">Wed</td>
+                                <td width="12.5%">Thu</td>
+                                <td width="12.5%">Fri</td>
+                                <td width="12.5%">Sat</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><abbr title="08:10~09:00">1</abbr></td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><abbr title="09:10~10:00">2</abbr></td>
+                                <td></td>
+                                <td></td>
+                                <td style=" background-color: #c27ba0;">
+                                    <abbr title="資料結構 
+Data Structure 
+HYTRB_231"><u>323391</u>
+                                    </abbr>
+                                </td>
+                                <td rowspan="3" style=" background-color: #76a5af;">
+                                    <abbr title="資料儲存系統導論
+Introduction to Data Storage Systems
+6TB_526">
+                                        <u>324024</u>
+                                    </abbr>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><abbr title="10:10~11:00">3</abbr></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><abbr title="11:10~12:00">4</abbr></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background:#c1b300;color:red;"><abbr title="12:10~13:00">N</abbr></td>
+                                <td style="background:#ffffcc;"></td>
+                                <td style="background:#ffffcc;"></td>
+                                <td style="background:#ffffcc;"></td>
+                                <td style="background:#ffffcc;"></td>
+                                <td style="background:#ffffcc;"></td>
+                                <td style="background:#ffffcc;"></td>
+                                <td style="background:#ffffcc;"></td>
+                            </tr>
+                            <tr>
+                                <td><abbr title="13:10~14:00">5</abbr></td>
+                                <td></td>
+                                <td rowspan="2" style=" background-color: #dd7e6b;">
+                                    <abbr title="國文
+Chinese
+4TB_103">
+                                        <u>323659</u>
+                                    </abbr>
+                                </td>
+                                <td></td>
+                                <td rowspan="3" style=" background-color: #f1c232;">
+                                    <abbr title="行銷管理
+Marketing
+6TB_427">
+                                        <u>320037</u>
+                                    </abbr>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><abbr title="14:10~15:00">6</abbr></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><abbr title="15:10~16:00">7</abbr></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><abbr title="16:10~17:00">8</abbr></td>
+                                <td></td>
+                                <td rowspan="2" style=" background-color: #c27ba0;">
+                                    <abbr title="資料結構
+Data Structure
+HYTRB_231">
+                                        <u>323391</u>
+                                    </abbr>
+                                </td>
+                                <td style="background-color: #b4a7d6;">
+                                    <abbr title="網頁程式設計
+Web Programming
+HYTRB_335">
+                                        <u>323349</u>
+                                    </abbr>
+                                </td>
+                                <td rowspan="2" style=" background-color: #b4a7d6;">
+                                    <abbr title="網頁程式設計
+Web Programming
+HYTRB_335">
+                                        <u>323349</u>
+                                    </abbr>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><abbr title="17:10~18:00">9</abbr></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background:#918600;color:white;"><abbr title="18:30~19:20">A</abbr></td>
+                                <td></td>
+                                <td rowspan="3" style=" background-color: #b6d7a8;">
+                                    <abbr title="進階C語言實務
+Advanced C programming
+CB_501">
+                                        <u>324025</u>
+                                    </abbr>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background:#918600;color:white;"><abbr title="19:20~20:10">B</abbr></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background:#918600;color:white;"><abbr title="20:20~21:10">C</abbr></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="background:#918600;color:white;"><abbr title="21:10~22:00">D</abbr></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="about page">
+                <h1>About</h1>
+                <hr />
+
+                <video width="320" height="240" controls autoplay muted>
+                    <source src="video/perfection.mp4" type="video/mp4" />
+                </video>
+                <h1>Exercice</h1>
+                <ol type="I">
+                    <li>hello</li>
+                    <li>
+                        hello
+                        <ul style="list-style-type: square">
+                            <li>bonjour</li>
+                            <li>bonjour</li>
+                            <li>bonjour</li>
+                            <li>bonjour</li>
+                            <li>
+                                <dl>
+                                    <dt>Sashimi</dt>
+                                    <dd>Sliced raw fish</dd>
+                                    <dt>Sashimi</dt>
+                                    <dd>
+                                        Sliced raw fish <br />
+                                        dslkfjsldkfjlsdf <br />sdfds fds
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>hello</li>
+                    <li>hello</li>
+                    <li>hello</li>
+                </ol>
+            </div>
+            <a id="top" href="#">▲</a>
+        </div>
+    </main>
+    <footer>
+        FOOTER
+    </footer>
+    <script>
+        if (window.location.hash) {
+            // Fragment exists
+            changepage(window.location.hash.substring(1));
+        }
+
+        window.onscroll = function () { scrollFunction(document.getElementById("top")) };
+        function changepage(name) {
+            document.querySelectorAll('.page').forEach(page => { page.classList.remove('show'); });
+            document.getElementsByClassName(name)[0].classList.add('show');
+        }
+        function scrollFunction(mybutton) {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+    </script>
 </body>
 </html>
